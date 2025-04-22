@@ -1,5 +1,51 @@
 # goit-js-hw-08
 
+🖼 Завдання — Галерея зображень
+
+📌 Опис завдання
+
+Реалізація динамічної галереї зображень, яка дозволяє переглядати великі
+зображення в модальному вікні при кліку на мініатюру. Для цього використовується
+бібліотека basicLightbox.
+
+✅ Що реалізовано
+
+Галерея автоматично створюється за допомогою JS із масиву об'єктів images.
+
+Розмітка відповідає макету та генерується динамічно.
+
+Для обробки кліків використано делегування подій на <ul class="gallery">.
+
+Підключено сторонню бібліотеку basicLightbox через CDN.
+
+При кліку на картку відкривається модальне вікно з великим зображенням.
+
+Поведінка за замовчуванням (HTML <a href> — перехід) скасована.
+
+🧠 Знання, що закріплюються
+
+Декомпозиція задачі (step-by-step approach).
+
+Робота з масивами та об'єктами.
+
+Створення розмітки через JS.
+
+Делегування подій — як застосовувати з реальним DOM.
+
+Робота з data-\* атрибутами.
+
+Підключення та використання JS-бібліотек.
+
+🌍 Де це можна застосувати
+
+Сторінки портфоліо: галерея робіт.
+
+Інтернет-магазин: перегляд фото товарів.
+
+Блог: додавання зображень через lightbox.
+
+Адмінпанелі: перегляд аватарок, фото, документів.
+
 Mодуль 8. Події та бібліотеки
 
 Дві третини курсу JavaScript пройдено — так тримати! 💪
@@ -63,39 +109,39 @@ Mодуль 8. Події та бібліотеки
     description — текстовий опис зображення, для атрибута alt малого зображення та підпису великого зображення в модалці.
 
 const images = [ { preview:
-'https://cdn.pixabay.com/photo/2019/05/14/16/43/rchids-4202820__480.jpg',
+'https://cdn.pixabay.com/photo/2019/05/14/16/43/rchids-4202820**480.jpg',
 original:
 'https://cdn.pixabay.com/photo/2019/05/14/16/43/rchids-4202820_1280.jpg',
 description: 'Hokkaido Flower', }, { preview:
-'https://cdn.pixabay.com/photo/2019/05/14/22/05/container-4203677__340.jpg',
+'https://cdn.pixabay.com/photo/2019/05/14/22/05/container-4203677**340.jpg',
 original:
 'https://cdn.pixabay.com/photo/2019/05/14/22/05/container-4203677_1280.jpg',
 description: 'Container Haulage Freight', }, { preview:
-'https://cdn.pixabay.com/photo/2019/05/16/09/47/beach-4206785__340.jpg',
+'https://cdn.pixabay.com/photo/2019/05/16/09/47/beach-4206785**340.jpg',
 original:
 'https://cdn.pixabay.com/photo/2019/05/16/09/47/beach-4206785_1280.jpg',
 description: 'Aerial Beach View', }, { preview:
-'https://cdn.pixabay.com/photo/2016/11/18/16/19/flowers-1835619__340.jpg',
+'https://cdn.pixabay.com/photo/2016/11/18/16/19/flowers-1835619**340.jpg',
 original:
 'https://cdn.pixabay.com/photo/2016/11/18/16/19/flowers-1835619_1280.jpg',
 description: 'Flower Blooms', }, { preview:
-'https://cdn.pixabay.com/photo/2018/09/13/10/36/mountains-3674334__340.jpg',
+'https://cdn.pixabay.com/photo/2018/09/13/10/36/mountains-3674334**340.jpg',
 original:
 'https://cdn.pixabay.com/photo/2018/09/13/10/36/mountains-3674334_1280.jpg',
 description: 'Alpine Mountains', }, { preview:
-'https://cdn.pixabay.com/photo/2019/05/16/23/04/landscape-4208571__340.jpg',
+'https://cdn.pixabay.com/photo/2019/05/16/23/04/landscape-4208571**340.jpg',
 original:
 'https://cdn.pixabay.com/photo/2019/05/16/23/04/landscape-4208571_1280.jpg',
 description: 'Mountain Lake Sailing', }, { preview:
-'https://cdn.pixabay.com/photo/2019/05/17/09/27/the-alps-4209272__340.jpg',
+'https://cdn.pixabay.com/photo/2019/05/17/09/27/the-alps-4209272**340.jpg',
 original:
 'https://cdn.pixabay.com/photo/2019/05/17/09/27/the-alps-4209272_1280.jpg',
 description: 'Alpine Spring Meadows', }, { preview:
-'https://cdn.pixabay.com/photo/2019/05/16/21/10/landscape-4208255__340.jpg',
+'https://cdn.pixabay.com/photo/2019/05/16/21/10/landscape-4208255**340.jpg',
 original:
 'https://cdn.pixabay.com/photo/2019/05/16/21/10/landscape-4208255_1280.jpg',
 description: 'Nature Landscape', }, { preview:
-'https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843__340.jpg',
+'https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843\_\_340.jpg',
 original:
 'https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843_1280.jpg',
 description: 'Lighthouse Coast Sea', }, ];
