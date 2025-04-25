@@ -106,4 +106,5 @@ document.addEventListener('keydown', event => {
     currentInstance = null; // Очищаємо змінну після закриття
   }
 });
+
 // Закриваємо модальне вікно при натисканні клавіші Escape
