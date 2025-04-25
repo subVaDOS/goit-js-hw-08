@@ -22,10 +22,26 @@ body {
   padding: 0;
 }
 
-.gallery-item {
-  flex-basis: calc(33.333% - 10.67px);
+@media screen and (max-width: 599px) {
+  .gallery-item {
+    flex-basis: 100%; /* 1 фото в ряд */
+  }
 }
 
+@media screen and (min-width: 600px) {
+  .gallery-item {
+    flex-basis: calc((100% - 1 * 16px) / 2); /* 2 фото в ряд */
+  }
+  .gallery {
+    gap: 10px;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  .gallery-item {
+    flex-basis: calc((100% - 2 * 16px) / 3); /* 3 фото в ряд */
+  }
+}
 .gallery-image {
   width: 100%;
   height: auto;
