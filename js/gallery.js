@@ -83,3 +83,27 @@ const createGalleryMarkup = images
   .join('');
 
 galleryEl.innerHTML = createGalleryMarkup;
+let currentInstance = null;
+// делегування події кліку на галерею
+galleryEl.addEventListener('click', event => {
+  event.preventDefault();
+
+  const isImageEl = event.target.nodeName === 'IMG';
+  if (!isImageEl) return;
+
+  const largeImageURL = event.target.dataset.source;
+
+  currentInstance = basicLightbox.create(`
+    <img src="${largeImageURL}" alt="${event.target.alt}" />
+  `);
+
+  currentInstance.show();
+});
+
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && currentInstance) {
+    currentInstance.close();
+    currentInstance = null; // Очищаємо змінну після закриття
+  }
+});
+// Закриваємо модальне вікно при натисканні клавіші Escape
