@@ -17,15 +17,13 @@ body {
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 8px;
   list-style: none;
   padding: 0;
 }
 
-@media screen and (max-width: 599px) {
-  .gallery-item {
-    flex-basis: 100%; /* 1 фото в ряд */
-  }
+.gallery-item {
+  flex-basis: 100%; /* 1 фото в ряд */
 }
 
 @media screen and (min-width: 600px) {
@@ -40,6 +38,9 @@ body {
 @media screen and (min-width: 1250px) {
   .gallery-item {
     flex-basis: calc((100% - 2 * 16px) / 3); /* 3 фото в ряд */
+  }
+  .gallery {
+    gap: 16px;
   }
 }
 .gallery-image {
